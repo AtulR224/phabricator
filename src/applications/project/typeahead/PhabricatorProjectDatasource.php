@@ -133,7 +133,7 @@ final class PhabricatorProjectDatasource
         ->setPriorityType('proj')
         ->setClosed($closed);
 
-      if (strlen($slug)) {
+      if (phutil_nonempty_string($slug)) {
         $proj_result->setAutocomplete('#'.$slug);
       }
 
